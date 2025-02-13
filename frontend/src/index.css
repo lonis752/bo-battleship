@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.background{
+  background-image: url("headerImage.jpeg");
+}
+
+#destroyer1 {
+  background-color: black;
+}
