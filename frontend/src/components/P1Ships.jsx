@@ -1,8 +1,20 @@
-function Ships({
+function P1Ships({
   isHorizontal,
   setIsHorizontal,
   selectedShip,
   setSelectedShip,
+  destroyerCords,
+  setDestroyerCords,
+  submarineCords,
+  setSubmarineCords,
+  cruiserCords,
+  setCruiserCords,
+  battleshipCords,
+  setBattleshipCords,
+  carrierCords,
+  setCarrierCords,
+  occupiedCords,
+  setOccupiedCords,
 }) {
   function handleRotate() {
     setIsHorizontal(!isHorizontal);
@@ -21,14 +33,17 @@ function Ships({
         <div
           className={
             selectedShip === "destroyer"
-              ? "flex items-center gap-3 animate-pulse"
-              : "flex items-center gap-3"
+              ? "flex items-center gap-3 cursor-pointer animate-pulse"
+              : destroyerCords.length > 0
+              ? "hidden"
+              : "flex items-center gap-3 cursor-pointer"
           }
+          onClick={handleSelection}
+          id="destroyer"
         >
           <div
             id="destroyer"
             className={isHorizontal ? "border-2 flex" : "border-2"}
-            onClick={handleSelection}
           >
             <div id="destroyer" name="d1" className="p-1">
               1
@@ -37,17 +52,28 @@ function Ships({
               2
             </div>
           </div>
-          <p>Destroyer</p>
+          <p
+            className="cursor-pointer"
+            onClick={handleSelection}
+            id="destroyer"
+          >
+            Destroyer
+          </p>
         </div>
-        <div className={
+        <div
+          className={
             selectedShip === "submarine"
-              ? "flex items-center gap-3 animate-pulse"
-              : "flex items-center gap-3"
-          }>
+              ? "flex items-center gap-3 cursor-pointer animate-pulse"
+              : submarineCords.length > 0
+              ? "hidden"
+              : "flex items-center gap-3 cursor-pointer"
+          }
+          onClick={handleSelection}
+          id="submarine"
+        >
           <div
             id="submarine"
             className={isHorizontal ? "border-2 flex" : "border-2"}
-            onClick={handleSelection}
           >
             <div id="submarine" name="s1" className="p-1">
               1
@@ -59,17 +85,28 @@ function Ships({
               3
             </div>
           </div>
-          <p>Submarine</p>
+          <p
+            className="cursor-pointer"
+            onClick={handleSelection}
+            id="submarine"
+          >
+            Submarine
+          </p>
         </div>
-        <div className={
+        <div
+          className={
             selectedShip === "cruiser"
-              ? "flex items-center gap-3 animate-pulse"
-              : "flex items-center gap-3"
-          }>
+              ? "flex items-center gap-3 cursor-pointer animate-pulse"
+              : cruiserCords.length > 0
+              ? "hidden"
+              : "flex items-center gap-3 cursor-pointer"
+          }
+          onClick={handleSelection}
+          id="cruiser"
+        >
           <div
             id="cruiser"
             className={isHorizontal ? "border-2 flex" : "border-2"}
-            onClick={handleSelection}
           >
             <div id="cruiser" name="cr1" className="p-1">
               1
@@ -81,17 +118,28 @@ function Ships({
               3
             </div>
           </div>
-          <p>Cruiser</p>
+          <p
+            className="cursor-pointer"
+            onClick={handleSelection}
+            id="cruiser"
+          >
+            Cruiser
+          </p>
         </div>
-        <div className={
+        <div
+          className={
             selectedShip === "battleship"
-              ? "flex items-center gap-3 animate-pulse"
-              : "flex items-center gap-3"
-          }>
+              ? "flex items-center gap-3 cursor-pointer animate-pulse"
+              : battleshipCords.length > 0
+              ? "hidden"
+              : "flex items-center gap-3 cursor-pointer"
+          }
+          onClick={handleSelection}
+          id="battleship"
+        >
           <div
             id="battleship"
             className={isHorizontal ? "border-2 flex" : "border-2"}
-            onClick={handleSelection}
           >
             <div id="battleship" name="b1" className="p-1">
               1
@@ -106,17 +154,28 @@ function Ships({
               4
             </div>
           </div>
-          <p>Battleship</p>
+          <p
+            className="cursor-pointer"
+            onClick={handleSelection}
+            id="battleship"
+          >
+            Battleship
+          </p>
         </div>
-        <div className={
+        <div
+          className={
             selectedShip === "carrier"
-              ? "flex items-center gap-3 animate-pulse"
-              : "flex items-center gap-3"
-          }>
+              ? "flex items-center gap-3 cursor-pointer animate-pulse"
+              : carrierCords.length > 0
+              ? "hidden"
+              : "flex items-center gap-3 cursor-pointer"
+          }
+          onClick={handleSelection}
+          id="carrier"
+        >
           <div
             id="carrier"
             className={isHorizontal ? "border-2 flex" : "border-2"}
-            onClick={handleSelection}
           >
             <div id="carrier" name="ca1" className="p-1">
               1
@@ -134,11 +193,17 @@ function Ships({
               5
             </div>
           </div>
-          <p>Carrier</p>
+          <p
+            className="cursor-pointer"
+            onClick={handleSelection}
+            id="carrier"
+          >
+            Carrier
+          </p>
         </div>
       </div>
     </div>
   );
 }
 
-export default Ships;
+export default P1Ships;
