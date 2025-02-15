@@ -7,6 +7,7 @@ function LobbyPage() {
     </div>
     <div className="flex">
         <button>Single Player</button>
+        <button>Versus</button>
         <button>Multiplayer</button>
     </div>
     </div>

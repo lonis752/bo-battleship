@@ -43,17 +43,17 @@ function P1Ships({
         >
           <div
             id="destroyer"
-            className={isHorizontal ? "border-2 flex" : "border-2"}
+            className={isHorizontal ? "flex flex-col -rotate-90" : ""}
           >
-            <div id="destroyer" name="d1" className="p-1">
-              1
+            <div id="destroyer" name="d1">
+              <img className="w-8" src="../public/destroyer/d1.png" />
             </div>
-            <div id="destroyer" name="d2" className="p-1">
-              2
+            <div id="destroyer" name="d2">
+              <img className="w-8" src="../public/destroyer/d2.png" />
             </div>
           </div>
           <p
-            className="cursor-pointer"
+            className="cursor-pointer p-5"
             onClick={handleSelection}
             id="destroyer"
           >
@@ -73,20 +73,21 @@ function P1Ships({
         >
           <div
             id="submarine"
-            className={isHorizontal ? "border-2 flex" : "border-2"}
+            className={isHorizontal ? "flex flex-col -rotate-90" : ""}
           >
-            <div id="submarine" name="s1" className="p-1">
-              1
+            <div id="submarine" name="s1">
+              
+            <img className="w-5" src="../public/submarine/s1.png" />
             </div>
-            <div id="submarine" name="s2" className="p-1">
-              2
+            <div id="submarine" name="s2">
+            <img className="w-5" src="../public/submarine/s2.png" />
             </div>
-            <div id="submarine" name="s3" className="p-1">
-              3
+            <div id="submarine" name="s3">
+            <img className="w-5" src="../public/submarine/s3.png" />
             </div>
           </div>
           <p
-            className="cursor-pointer"
+            className="cursor-pointer p-5"
             onClick={handleSelection}
             id="submarine"
           >
@@ -106,23 +107,19 @@ function P1Ships({
         >
           <div
             id="cruiser"
-            className={isHorizontal ? "border-2 flex" : "border-2"}
+            className={isHorizontal ? "flex flex-col -rotate-90" : ""}
           >
-            <div id="cruiser" name="cr1" className="p-1">
-              1
+            <div id="cruiser" name="cr1">
+            <img className="w-5" src="../public/cruiser/cr1.png" />
             </div>
-            <div id="cruiser" name="cr2" className="p-1">
-              2
+            <div id="cruiser" name="cr2">
+            <img className="w-5" src="../public/cruiser/cr2.png" />
             </div>
-            <div id="cruiser" name="cr3" className="p-1">
-              3
+            <div id="cruiser" name="cr3">
+            <img className="w-5" src="../public/cruiser/cr3.png" />
             </div>
           </div>
-          <p
-            className="cursor-pointer"
-            onClick={handleSelection}
-            id="cruiser"
-          >
+          <p className="cursor-pointer p-5" onClick={handleSelection} id="cruiser">
             Cruiser
           </p>
         </div>
@@ -139,23 +136,23 @@ function P1Ships({
         >
           <div
             id="battleship"
-            className={isHorizontal ? "border-2 flex" : "border-2"}
+            className={isHorizontal ? "flex flex-col -rotate-90" : ""}
           >
-            <div id="battleship" name="b1" className="p-1">
-              1
+            <div id="battleship" name="b1">
+            <img className="w-5" src="../public/battleship/b1.png" />
             </div>
-            <div id="battleship" name="b2" className="p-1">
-              2
+            <div id="battleship" name="b2">
+            <img className="w-5" src="../public/battleship/b2.png" />
             </div>
-            <div id="battleship" name="b3" className="p-1">
-              3
+            <div id="battleship" name="b3">
+            <img className="w-5" src="../public/battleship/b3.png" />
             </div>
-            <div id="battleship" name="b4" className="p-1">
-              4
+            <div id="battleship" name="b4">
+            <img className="w-5" src="../public/battleship/b4.png" />
             </div>
           </div>
           <p
-            className="cursor-pointer"
+            className="cursor-pointer p-6"
             onClick={handleSelection}
             id="battleship"
           >
@@ -175,29 +172,25 @@ function P1Ships({
         >
           <div
             id="carrier"
-            className={isHorizontal ? "border-2 flex" : "border-2"}
+            className={isHorizontal ? "flex flex-col -rotate-90" : ""}
           >
-            <div id="carrier" name="ca1" className="p-1">
-              1
+            <div id="carrier" name="ca1">
+            <img className="w-5" src="../public/carrier/ca1.png" />
             </div>
-            <div id="carrier" name="ca2" className="p-1">
-              2
+            <div id="carrier" name="ca2">
+            <img className="w-5" src="../public/carrier/ca2.png" />
             </div>
-            <div id="carrier" name="ca3" className="p-1">
-              3
+            <div id="carrier" name="ca3">
+            <img className="w-5" src="../public/carrier/ca3.png" />
             </div>
-            <div id="carrier" name="ca4" className="p-1">
-              4
+            <div id="carrier" name="ca4">
+            <img className="w-5" src="../public/carrier/ca4.png" />
             </div>
-            <div id="carrier" name="ca5" className="p-1">
-              5
+            <div id="carrier" name="ca5">
+            <img className="w-5" src="../public/carrier/ca5.png" />
             </div>
           </div>
-          <p
-            className="cursor-pointer"
-            onClick={handleSelection}
-            id="carrier"
-          >
+          <p className="cursor-pointer p-7" onClick={handleSelection} id="carrier">
             Carrier
           </p>
         </div>

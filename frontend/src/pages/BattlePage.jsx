@@ -55,7 +55,7 @@ function BattlePage() {
             setOccupiedCords={setOccupiedCords}
           />
         </div>
-        <div className="flex gap-5 items-center">
+        <div className="flex gap-5 items-center hidden">
           <P2Gameboard
             isHorizontal={isHorizontal}
             selectedShip={selectedShip}

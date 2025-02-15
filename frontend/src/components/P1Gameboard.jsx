@@ -193,7 +193,43 @@ function P1Gameboard({
         id={i}
         key={i}
       >
-        {destroyerCords[1] === i ? <img src="#" /> : destroyerCords[2] === i ? <img src="#" /> : i}
+        {destroyerCords[0] === i ? (
+          <img className={isHorizontal ? "-rotate-90 bg-gray-400" : ""} src="../public/destroyer/d1.png" />
+        ) : destroyerCords[1] === i ? (
+          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/destroyer/d2.png" />
+        ) : submarineCords[0] === i ? (
+          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/submarine/s1.png" />
+        ) : submarineCords[1] === i ? (
+          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/submarine/s2.png" />
+        ) : submarineCords[2] === i ? (
+          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/submarine/s3.png" />
+        ) : cruiserCords[0] === i ? (
+          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/cruiser/cr1.png" />
+        ) : cruiserCords[1] === i ? (
+          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/cruiser/cr2.png" />
+        ) : cruiserCords[2] === i ? (
+          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/cruiser/cr3.png" />
+        ) : battleshipCords[0] === i ? (
+          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/battleship/b1.png" />
+        ) : battleshipCords[1] === i ? (
+          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/battleship/b2.png" />
+        ) : battleshipCords[2] === i ? (
+          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/battleship/b3.png" />
+        ) : battleshipCords[3] === i ? (
+          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/battleship/b4.png" />
+        ) : carrierCords[0] === i ? (
+          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/carrier/ca1.png" />
+        ) : carrierCords[1] === i ? (
+          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/carrier/ca2.png" />
+        ) : carrierCords[2] === i ? (
+          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/carrier/ca3.png" />
+        ) : carrierCords[3] === i ? (
+          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/carrier/ca4.png" />
+        ) : carrierCords[4] === i ? (
+          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/carrier/ca5.png" />
+        ) : (
+          i
+        )}
       </div>
     );
   }
