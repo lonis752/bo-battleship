@@ -24,8 +24,7 @@ function P1Gameboard({
           return alert("Can't place ship there");
         } else if (!occupiedCords.includes(id + 1)) {
           setOccupiedCords((o) => [...o, id, id + 1]);
-
-          setDestroyerCords((s) => [...s, id, id + 1]);
+          setDestroyerCords((s) => [...s, id, id + 1, "horizontal"]);
         } else {
           return alert("Ship is already taking the spot");
         }
@@ -48,7 +47,7 @@ function P1Gameboard({
           ![id + 1, id + 2].some((cords) => occupiedCords.includes(cords))
         ) {
           setOccupiedCords((o) => [...o, id, id + 1, id + 2]);
-          setSubmarineCords((s) => [...s, id, id + 1, id + 2]);
+          setSubmarineCords((s) => [...s, id, id + 1, id + 2, "horizontal"]);
         } else {
           return alert("Ship is already taking the spot");
         }
@@ -73,7 +72,7 @@ function P1Gameboard({
           ![id + 1, id + 2].some((cords) => occupiedCords.includes(cords))
         ) {
           setOccupiedCords((o) => [...o, id, id + 1, id + 2]);
-          setCruiserCords((cr) => [...cr, id, id + 1, id + 2]);
+          setCruiserCords((cr) => [...cr, id, id + 1, id + 2, "horizontal"]);
         } else {
           return alert("Ship is already taking the spot");
         }
@@ -100,7 +99,14 @@ function P1Gameboard({
           )
         ) {
           setOccupiedCords((o) => [...o, id, id + 1, id + 2, id + 3]);
-          setBattleshipCords((b) => [...b, id, id + 1, id + 2, id + 3]);
+          setBattleshipCords((b) => [
+            ...b,
+            id,
+            id + 1,
+            id + 2,
+            id + 3,
+            "horizontal",
+          ]);
         } else {
           return alert("Ship is already taking the spot");
         }
@@ -129,7 +135,15 @@ function P1Gameboard({
           )
         ) {
           setOccupiedCords((o) => [...o, id, id + 1, id + 2, id + 3, id + 4]);
-          setCarrierCords((s) => [...s, id, id + 1, id + 2, id + 3, id + 4]);
+          setCarrierCords((s) => [
+            ...s,
+            id,
+            id + 1,
+            id + 2,
+            id + 3,
+            id + 4,
+            "horizontal",
+          ]);
         } else {
           return alert("Ship is already taking the spot");
         }
@@ -178,7 +192,7 @@ function P1Gameboard({
           cruiserCords.includes(i) ||
           battleshipCords.includes(i) ||
           carrierCords.includes(i)
-            ? "border-2 bg-gray-800 text-center"
+            ? "bg-gray-800 text-center"
             : "border-2 bg-gray-400 text-center"
         }
         onClick={
@@ -194,39 +208,108 @@ function P1Gameboard({
         key={i}
       >
         {destroyerCords[0] === i ? (
-          <img className={isHorizontal ? "-rotate-90 bg-gray-400" : ""} src="../public/destroyer/d1.png" />
+          <img
+            className={
+              destroyerCords.includes("horizontal") ? "-rotate-90" : ""
+            }
+            src="../public/destroyer/d1.png"
+          />
         ) : destroyerCords[1] === i ? (
-          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/destroyer/d2.png" />
+          <img
+            className={
+              destroyerCords.includes("horizontal") ? "-rotate-90" : ""
+            }
+            src="../public/destroyer/d2.png"
+          />
         ) : submarineCords[0] === i ? (
-          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/submarine/s1.png" />
+          <img
+            className={
+              submarineCords.includes("horizontal") ? "-rotate-90" : ""
+            }
+            src="../public/submarine/s1.png"
+          />
         ) : submarineCords[1] === i ? (
-          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/submarine/s2.png" />
+          <img
+            className={
+              submarineCords.includes("horizontal") ? "-rotate-90" : ""
+            }
+            src="../public/submarine/s2.png"
+          />
         ) : submarineCords[2] === i ? (
-          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/submarine/s3.png" />
+          <img
+            className={
+              submarineCords.includes("horizontal") ? "-rotate-90" : ""
+            }
+            src="../public/submarine/s3.png"
+          />
         ) : cruiserCords[0] === i ? (
-          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/cruiser/cr1.png" />
+          <img
+            className={cruiserCords.includes("horizontal") ? "-rotate-90" : ""}
+            src="../public/cruiser/cr1.png"
+          />
         ) : cruiserCords[1] === i ? (
-          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/cruiser/cr2.png" />
+          <img
+            className={cruiserCords.includes("horizontal") ? "-rotate-90" : ""}
+            src="../public/cruiser/cr2.png"
+          />
         ) : cruiserCords[2] === i ? (
-          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/cruiser/cr3.png" />
+          <img
+            className={cruiserCords.includes("horizontal") ? "-rotate-90" : ""}
+            src="../public/cruiser/cr3.png"
+          />
         ) : battleshipCords[0] === i ? (
-          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/battleship/b1.png" />
+          <img
+            className={
+              battleshipCords.includes("horizontal") ? "-rotate-90" : ""
+            }
+            src="../public/battleship/b1.png"
+          />
         ) : battleshipCords[1] === i ? (
-          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/battleship/b2.png" />
+          <img
+            className={
+              battleshipCords.includes("horizontal") ? "-rotate-90" : ""
+            }
+            src="../public/battleship/b2.png"
+          />
         ) : battleshipCords[2] === i ? (
-          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/battleship/b3.png" />
+          <img
+            className={
+              battleshipCords.includes("horizontal") ? "-rotate-90" : ""
+            }
+            src="../public/battleship/b3.png"
+          />
         ) : battleshipCords[3] === i ? (
-          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/battleship/b4.png" />
+          <img
+            className={
+              battleshipCords.includes("horizontal") ? "-rotate-90" : ""
+            }
+            src="../public/battleship/b4.png"
+          />
         ) : carrierCords[0] === i ? (
-          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/carrier/ca1.png" />
+          <img
+            className={carrierCords.includes("horizontal") ? "-rotate-90" : ""}
+            src="../public/carrier/ca1.png"
+          />
         ) : carrierCords[1] === i ? (
-          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/carrier/ca2.png" />
+          <img
+            className={carrierCords.includes("horizontal") ? "-rotate-90" : ""}
+            src="../public/carrier/ca2.png"
+          />
         ) : carrierCords[2] === i ? (
-          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/carrier/ca3.png" />
+          <img
+            className={carrierCords.includes("horizontal") ? "-rotate-90" : ""}
+            src="../public/carrier/ca3.png"
+          />
         ) : carrierCords[3] === i ? (
-          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/carrier/ca4.png" />
+          <img
+            className={carrierCords.includes("horizontal") ? "-rotate-90" : ""}
+            src="../public/carrier/ca4.png"
+          />
         ) : carrierCords[4] === i ? (
-          <img className={isHorizontal ? "-rotate-90" : ""} src="../public/carrier/ca5.png" />
+          <img
+            className={carrierCords.includes("horizontal") ? "-rotate-90" : ""}
+            src="../public/carrier/ca5.png"
+          />
         ) : (
           i
         )}
