@@ -1,4 +1,4 @@
-function P1Gameboard({
+function P1LineOfBattle({
   isHorizontal,
   selectedShip,
   setSelectedShip,
@@ -210,105 +210,155 @@ function P1Gameboard({
         {destroyerCords[0] === i ? (
           <img
             className={
-              destroyerCords.includes("horizontal") ? "-rotate-90" : ""
+              destroyerCords.includes("horizontal")
+                ? "-rotate-90 w-full h-full object-cover"
+                : "w-full h-full object-cover"
             }
-            src="../public/destroyer/d1.png"
+            src="/destroyer/d1.png"
           />
         ) : destroyerCords[1] === i ? (
           <img
             className={
-              destroyerCords.includes("horizontal") ? "-rotate-90" : ""
+              destroyerCords.includes("horizontal")
+                ? "-rotate-90 w-full h-full object-cover"
+                : "w-full h-full object-cover"
             }
-            src="../public/destroyer/d2.png"
+            src="/destroyer/d2.png"
           />
         ) : submarineCords[0] === i ? (
           <img
             className={
-              submarineCords.includes("horizontal") ? "-rotate-90" : ""
+              submarineCords.includes("horizontal")
+                ? "-rotate-90 w-full h-full object-cover"
+                : "w-full h-full object-cover"
             }
-            src="../public/submarine/s1.png"
+            src="/submarine/s1.png"
           />
         ) : submarineCords[1] === i ? (
           <img
             className={
-              submarineCords.includes("horizontal") ? "-rotate-90" : ""
+              submarineCords.includes("horizontal")
+                ? "-rotate-90 w-full h-full object-cover"
+                : "w-full h-full object-cover"
             }
-            src="../public/submarine/s2.png"
+            src="/submarine/s2.png"
           />
         ) : submarineCords[2] === i ? (
           <img
             className={
-              submarineCords.includes("horizontal") ? "-rotate-90" : ""
+              submarineCords.includes("horizontal")
+                ? "-rotate-90 w-full h-full object-cover"
+                : "w-full h-full object-cover"
             }
-            src="../public/submarine/s3.png"
+            src="/submarine/s3.png"
           />
         ) : cruiserCords[0] === i ? (
           <img
-            className={cruiserCords.includes("horizontal") ? "-rotate-90" : ""}
-            src="../public/cruiser/cr1.png"
+            className={
+              cruiserCords.includes("horizontal")
+                ? "-rotate-90 w-full h-full object-cover"
+                : "w-full h-full object-cover"
+            }
+            src="/cruiser/cr1.png"
           />
         ) : cruiserCords[1] === i ? (
           <img
-            className={cruiserCords.includes("horizontal") ? "-rotate-90" : ""}
-            src="../public/cruiser/cr2.png"
+            className={
+              cruiserCords.includes("horizontal")
+                ? "-rotate-90 w-full h-full object-cover"
+                : "w-full h-full object-cover"
+            }
+            src="/cruiser/cr2.png"
           />
         ) : cruiserCords[2] === i ? (
           <img
-            className={cruiserCords.includes("horizontal") ? "-rotate-90" : ""}
-            src="../public/cruiser/cr3.png"
+            className={
+              cruiserCords.includes("horizontal")
+                ? "-rotate-90 w-full h-full object-cover"
+                : "w-full h-full object-cover"
+            }
+            src="/cruiser/cr3.png"
           />
         ) : battleshipCords[0] === i ? (
           <img
             className={
-              battleshipCords.includes("horizontal") ? "-rotate-90" : ""
+              battleshipCords.includes("horizontal")
+                ? "-rotate-90 w-full h-full object-cover"
+                : "w-full h-full object-cover"
             }
-            src="../public/battleship/b1.png"
+            src="/battleship/b1.png"
           />
         ) : battleshipCords[1] === i ? (
           <img
             className={
-              battleshipCords.includes("horizontal") ? "-rotate-90" : ""
+              battleshipCords.includes("horizontal")
+                ? "-rotate-90 w-full h-full object-cover"
+                : "w-full h-full object-cover"
             }
-            src="../public/battleship/b2.png"
+            src="/battleship/b2.png"
           />
         ) : battleshipCords[2] === i ? (
           <img
             className={
-              battleshipCords.includes("horizontal") ? "-rotate-90" : ""
+              battleshipCords.includes("horizontal")
+                ? "-rotate-90 w-full h-full object-cover"
+                : "w-full h-full object-cover"
             }
-            src="../public/battleship/b3.png"
+            src="/battleship/b3.png"
           />
         ) : battleshipCords[3] === i ? (
           <img
             className={
-              battleshipCords.includes("horizontal") ? "-rotate-90" : ""
+              battleshipCords.includes("horizontal")
+                ? "-rotate-90 w-full h-full object-cover"
+                : "w-full h-full object-cover"
             }
-            src="../public/battleship/b4.png"
+            src="/battleship/b4.png"
           />
         ) : carrierCords[0] === i ? (
           <img
-            className={carrierCords.includes("horizontal") ? "-rotate-90" : ""}
-            src="../public/carrier/ca1.png"
+            className={
+              carrierCords.includes("horizontal")
+                ? "-rotate-90 w-full h-full object-cover"
+                : "w-full h-full object-cover"
+            }
+            src="/carrier/ca1.png"
           />
         ) : carrierCords[1] === i ? (
           <img
-            className={carrierCords.includes("horizontal") ? "-rotate-90" : ""}
-            src="../public/carrier/ca2.png"
+            className={
+              carrierCords.includes("horizontal")
+                ? "-rotate-90 w-full h-full object-cover"
+                : "w-full h-full object-cover"
+            }
+            src="/carrier/ca2.png"
           />
         ) : carrierCords[2] === i ? (
           <img
-            className={carrierCords.includes("horizontal") ? "-rotate-90" : ""}
-            src="../public/carrier/ca3.png"
+            className={
+              carrierCords.includes("horizontal")
+                ? "-rotate-90 w-full h-full object-cover"
+                : "w-full h-full object-cover"
+            }
+            src="/carrier/ca3.png"
           />
         ) : carrierCords[3] === i ? (
           <img
-            className={carrierCords.includes("horizontal") ? "-rotate-90" : ""}
-            src="../public/carrier/ca4.png"
+            className={
+              carrierCords.includes("horizontal")
+                ? "-rotate-90 w-full h-full object-cover"
+                : "w-full h-full object-cover"
+            }
+            src="/carrier/ca4.png"
           />
         ) : carrierCords[4] === i ? (
           <img
-            className={carrierCords.includes("horizontal") ? "-rotate-90" : ""}
-            src="../public/carrier/ca5.png"
+            className={
+              carrierCords.includes("horizontal")
+                ? "-rotate-90 w-full h-full object-cover"
+                : "w-full h-full object-cover"
+            }
+            src="/carrier/ca5.png"
           />
         ) : (
           i
@@ -318,10 +368,10 @@ function P1Gameboard({
   }
 
   return (
-    <>
-      <div className="grid grid-cols-10 grid-rows-10 w-72 h-72">{rows}</div>
-    </>
+    <div className="pt-55">
+      <div className="grid grid-cols-10 grid-rows-10 w-96 h-96">{rows}</div>
+    </div>
   );
 }
 
-export default P1Gameboard;
+export default P1LineOfBattle;

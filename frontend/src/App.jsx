@@ -1,15 +1,11 @@
-import { Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
 import BattlePage from "./pages/BattlePage";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<BattlePage />} />
-      </Routes>
-    </>
+    <div className="flex flex-col">
+      <BattlePage />
+    </div>
   );
 }
 

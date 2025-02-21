@@ -1,6 +1,29 @@
 @import "tailwindcss";
 
-.background{
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.title {
+  background-image: url("titleBG.png");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.rules {
+  background-image: url("rules.jpeg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background {
   background-image: url("headerImage.jpeg");
 }
 
