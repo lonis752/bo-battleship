@@ -32,7 +32,7 @@ function P1Ships({
   }
   
   function handleDeploy() {
-    if (gamemode === "single") {
+    if (gamemode === "single" && occupiedCords.length === 17) {
       setPhase("p1atk");
     } else if (gamemode === "versus") {
       setPhase("p2set");
