@@ -7,7 +7,7 @@ function TitleScreen({ setPhase, setGamemode }) {
   }
   return (
     <>
-      <div className="bg-[url('titleBG.png')] h-100% bg-center bg-no-repeat bg-cover flex items-center justify-center">
+      <div className="title flex items-center justify-center">
         <div className="h-[calc(100vh-2rem)] w-screen flex justify-center items-center">
           <div className="flex gap-5">
             <button

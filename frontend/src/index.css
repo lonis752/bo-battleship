@@ -6,3 +6,39 @@ body {
   height: 100%;
   overflow: hidden;
 }
+
+.title {
+  background-image: url("https://ik.imagekit.io/lonisk96/Bo's%20Battleships/titleBG.png?updatedAt=1740346879423");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.winner {
+  background-image: url(winner.jpeg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.loser {
+  background-image: url(loser.jpeg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.rules {
+  background-image: url(rules.jpeg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#destroyer1 {
+  background-color: black;
+}
