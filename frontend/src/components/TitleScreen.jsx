@@ -13,7 +13,7 @@ function TitleScreen({ setPhase, setGamemode }) {
             <button
               onClick={handleClick}
               id="single"
-              className="bg-indigo-700 hover:bg-indigo-800 text-pink-400 font-bold py-2 px-4 rounded max-h-10 mt-60"
+              className="bg-indigo-700 hover:bg-indigo-800 text-pink-400 font-bold py-2 px-4 rounded max-h-10 mt-96"
             >
               Single Player
             </button>
