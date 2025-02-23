@@ -1,8 +1,13 @@
-# React + Vite
+# Bo's BattleShips
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a front end Battleship game created with JavaScript as a focus. There were no packages used other than gh-pages to get the app running on a live URL. The use of React router dom would be advised but I wanted to practice and see the limits of what I could do without routes. Instead using states to dictate what and when certain components are shown while using the app.
 
-Currently, two official plugins are available:
+```
+npm create vite@latest
+npm i gh-pages
+```
+Future Updates:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Fix image resolving error at deployment.
+* Versus play to play with someone at the same monitor.
+* Multi player mode to play with someone over the web.
