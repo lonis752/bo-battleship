@@ -30,7 +30,7 @@ function P1Ships({
     setCarrierCords([]);
     setOccupiedCords([]);
   }
-  
+
   function handleDeploy() {
     if (gamemode === "single" && occupiedCords.length === 17) {
       setPhase("p1atk");
@@ -44,24 +44,29 @@ function P1Ships({
   }
   // Creating Ships
   return (
-    <div className="flex flex-col gap-10 p-5 items-center">
+    <div className="flex flex-col gap-5 items-center">
       <div className="flex gap-3">
         <button
           className={
-            occupiedCords.length > 16 ? "hidden" : "border-2 cursor-pointer"
+            occupiedCords.length > 16
+              ? "hidden"
+              : "border-2 cursor-pointer p-2 rounded-4xl bg-blue-300 border-blue-400"
           }
           onClick={handleRotate}
         >
-          Rotate Ships
-        </button>
-        <button className="border-2 cursor-pointer" onClick={handleReset}>
-          Reset Ships
+          <strong>↻</strong> Ships
         </button>
         <button
-          className="border-2 cursor-pointer bg-red-700"
+          className="border-2 cursor-pointer p-2 rounded-4xl bg-orange-300 border-orange-400"
+          onClick={handleReset}
+        >
+          <strong>⇏</strong> Reset
+        </button>
+        <button
+          className="border-2 cursor-pointer bg-red-700 p-2 text-white border-red-500 rounded-4xl"
           onClick={handleDeploy}
         >
-          Deploy
+          Deploy <strong>▶</strong>
         </button>
       </div>
 
@@ -69,7 +74,7 @@ function P1Ships({
         <div
           className={
             selectedShip === "destroyer"
-              ? "flex flex-col items-center gap-3 cursor-pointer animate-pulse"
+              ? "flex flex-col items-center cursor-pointer animate-pulse"
               : destroyerCords.length > 0
               ? "hidden"
               : "flex flex-col items-center gap-3 cursor-pointer"

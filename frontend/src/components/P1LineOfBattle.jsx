@@ -14,9 +14,9 @@ function P1LineOfBattle({
   setCarrierCords,
   occupiedCords,
   setOccupiedCords,
-  cpuHitCords=[],
+  cpuHitCords = [],
   setCpuHitCords,
-  cpuMissCords=[],
+  cpuMissCords = [],
   setCpuMissCords,
   phase,
   setPhase,
@@ -87,13 +87,25 @@ function P1LineOfBattle({
             alt={ship}
           />
         );
+      } else if (cpuHitCords.includes(i)) {
+        return (
+          <img
+            className={
+              coords.includes("horizontal")
+                ? "-rotate-90 w-full h-full object-cover"
+                : "w-full h-full object-cover"
+            }
+            src={`hit.png`}
+            alt={ship}
+          />
+        );
       }
     }
-    return i;
+    return "•";
   }
 
   return (
-    <div className="pt-20">
+    <div className="pt-5">
       <div className="grid grid-cols-10 grid-rows-10 w-96 h-96">
         {Array.from({ length: 100 }, (_, i) => (
           <div
@@ -101,8 +113,12 @@ function P1LineOfBattle({
             id={i}
             className={
               occupiedCords.includes(i)
-                ? "bg-gray-900 text-center" :
-                cpuMissCords.includes(i) ? "bg-red-300 text-center" : cpuHitCords.includes(i) ? "bg-red-600 text-center" : "border-2 bg-gray-400 text-center"
+                ? "bg-gray-900 text-center"
+                : cpuMissCords.includes(i)
+                ? "bg-orange-300 text-center font-bold text-3xl border-2"
+                : cpuHitCords.includes(i)
+                ? "bg-red-600 text-center font-bold text-3xl border-2"
+                : "border-2 bg-gray-400 text-center font-bold text-3xl"
             }
             onClick={!occupiedCords.includes(i) ? placeShip : undefined}
           >
@@ -110,6 +126,9 @@ function P1LineOfBattle({
           </div>
         ))}
       </div>
+      <p className={phase === "p1set" ? "hidden" : "text-center pt-5"}>
+        Turn: {phase === "p1atk" ? "Player 1" : "CPU"}
+      </p>
     </div>
   );
 }

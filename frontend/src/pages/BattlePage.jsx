@@ -5,6 +5,8 @@ import TitleScreen from "../components/TitleScreen";
 import Navbar from "../components/Navbar";
 import Rules from "../components/Rules";
 import OppLineOfBattle from "../components/OppLineOfBattle";
+import Winner from "../components/Winner";
+import Loser from "../components/Loser";
 
 function BattlePage() {
   const [isHorizontal, setIsHorizontal] = useState(false);
@@ -16,15 +18,17 @@ function BattlePage() {
   const [battleshipCords, setBattleshipCords] = useState([]);
   const [carrierCords, setCarrierCords] = useState([]);
   const [occupiedCords, setOccupiedCords] = useState([]);
-  
+
   // Phase and Gamemode Logic
-  const [phase, setPhase] = useState("p1set");
+  const [phase, setPhase] = useState("gameStart");
   // gameStart, rules, p1set, p2set, p1atk, p2atk, cpuatk, victoryAtSea
   const [gamemode, setGamemode] = useState("single");
   // single, versus, multi
 
-  const [cpuHitCords, setCpuHitCords] = useState([])
-  const [cpuMissCords, setCpuMissCords] = useState([])
+  const [cpuHitCords, setCpuHitCords] = useState([]);
+  const [cpuMissCords, setCpuMissCords] = useState([]);
+
+  const [winner, setWinner] = useState("");
 
   return (
     <>
@@ -106,11 +110,52 @@ function BattlePage() {
             cpuMissCords={cpuMissCords}
             setCpuHitCords={setCpuHitCords}
             setCpuMissCords={setCpuMissCords}
+            winner={winner}
+            setWinner={setWinner}
           />
         </div>
         <div
           className={phase === "p2set" ? "flex gap-5 items-center" : "hidden"}
+        ></div>
+        <div
+          className={
+            phase === "victoryAtSea" && winner === "Player 1" ? "" : "hidden"
+          }
         >
+          <Winner
+            winner={winner}
+            setWinner={setWinner}
+            setPhase={setPhase}
+            setGamemode={setGamemode}
+            setDestroyerCords={setDestroyerCords}
+            setSubmarineCords={setSubmarineCords}
+            setCruiserCords={setCruiserCords}
+            setBattleshipCords={setBattleshipCords}
+            setCarrierCords={setCarrierCords}
+            setOccupiedCords={setOccupiedCords}
+            setCpuHitCords={setCpuHitCords}
+            setCpuMissCords={setCpuMissCords}
+          />
+        </div>
+        <div
+          className={
+            phase === "victoryAtSea" && winner === "CPU" ? "" : "hidden"
+          }
+        >
+          <Loser
+            winner={winner}
+            setWinner={setWinner}
+            setPhase={setPhase}
+            setGamemode={setGamemode}
+            setDestroyerCords={setDestroyerCords}
+            setSubmarineCords={setSubmarineCords}
+            setCruiserCords={setCruiserCords}
+            setBattleshipCords={setBattleshipCords}
+            setCarrierCords={setCarrierCords}
+            setOccupiedCords={setOccupiedCords}
+            setCpuHitCords={setCpuHitCords}
+            setCpuMissCords={setCpuMissCords}
+          />
         </div>
       </div>
     </>

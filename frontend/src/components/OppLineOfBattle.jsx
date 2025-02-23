@@ -8,6 +8,8 @@ function OppLineOfBattle({
   setCpuMissCords,
   phase,
   occupiedCords,
+  winner,
+  setWinner,
 }) {
   const boardSize = 10;
   const shipLengths = [2, 3, 3, 4, 5];
@@ -23,7 +25,7 @@ function OppLineOfBattle({
   const [hits, setHits] = useState(new Set());
   const [misses, setMisses] = useState(new Set()); // Track missed shots
   const [sunkShips, setSunkShips] = useState(new Set());
-  const [events, setEvents] = useState("")
+  const [events, setEvents] = useState("");
 
   useEffect(() => {
     setShips(placeShips());
@@ -156,22 +158,33 @@ function OppLineOfBattle({
         return prev; // Return the same state if position is already present
       });
     }
+    setPhase("p1atk");
 
     // Check if the CPU wins (all occupiedCords hit)
     if (checkWinner(occupiedCords, cpuHitCords)) {
       setPhase("victoryAtSea");
+      setWinner("CPU");
       alert("CPU WINS");
+      setShips([]);
+      setHits(new Set());
+      setMisses(new Set());
+      setSunkShips(new Set());
+      setEvents("");
       return;
     }
 
     // Check if the player wins (all ships' cells hit)
     if (ships.every((ship) => ship.coords.every((cell) => hits.has(cell)))) {
       setPhase("victoryAtSea");
+      setWinner("Player 1");
       alert("YOU WIN");
+      setShips([]);
+      setHits(new Set());
+      setMisses(new Set());
+      setSunkShips(new Set());
+      setEvents("");
       return;
     }
-
-    setPhase("p1atk");
   }
 
   const rows = [];
@@ -185,7 +198,7 @@ function OppLineOfBattle({
     rows.push(
       <div
         key={i}
-        className={`border-2 text-center w-10 h-10 flex items-center justify-center 
+        className={`border-2 text-center w-10 h-10 flex items-center justify-center font-bold text-3xl
           ${
             isSunk
               ? "bg-red-600"
@@ -193,23 +206,29 @@ function OppLineOfBattle({
               ? "bg-red-300"
               : isMissCell
               ? "bg-white"
-              : "bg-gray-400"
+              : "bg-gray-400 cursor-pointer"
           }`}
         onClick={() => {
-          handleCellClick(i);
-          cpuAttack();
+          if (phase === "p1atk" && !hits.has(i) && !misses.has(i)) {
+            handleCellClick(i);
+            setTimeout(() => {
+              cpuAttack();
+            }, 1);
+          }
         }}
       >
-        {i}
+        {isSunk || isHit(i) ? <img src="hit.png" /> : <p>•</p>}
       </div>
     );
   }
 
   return (
-    <div className="pt-10 flex flex-col items-center gap-5 justify-center">
-        <p>{events}</p>
-      <div className="grid grid-cols-10 grid-rows-10 w-96 h-96">{rows}</div>
-    </div>
+    <>
+      <div className="flex flex-col items-center gap-5 justify-center pt-5">
+        <div className="grid grid-cols-10 grid-rows-10 w-96 h-96">{rows}</div>
+      </div>
+      <p className="text-center pt-5">{events}</p>
+    </>
   );
 }
 

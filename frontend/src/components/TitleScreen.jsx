@@ -2,8 +2,8 @@ import Footer from "./Footer";
 
 function TitleScreen({ setPhase, setGamemode }) {
   function handleClick(e) {
-    setPhase("rules")
-    setGamemode(e.target.id)
+    setPhase("rules");
+    setGamemode("single"); // change to e.target.id when other features are ready
   }
   return (
     <>
@@ -17,7 +17,7 @@ function TitleScreen({ setPhase, setGamemode }) {
             >
               Single Player
             </button>
-            <button
+            {/* <button
               onClick={handleClick}
               id="versus"
               className="bg-indigo-700 hover:bg-indigo-800 text-pink-400 font-bold py-2 px-4 rounded max-h-10 mt-60"
@@ -30,7 +30,7 @@ function TitleScreen({ setPhase, setGamemode }) {
               className="bg-indigo-700 hover:bg-indigo-800 text-pink-400 font-bold py-2 px-4 rounded max-h-10 mt-60"
             >
               Multiplayer
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

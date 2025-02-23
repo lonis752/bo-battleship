@@ -15,6 +15,22 @@ body {
   background-size: cover;
 }
 
+.winner {
+  background-image: url("winner.jpeg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.loser {
+  background-image: url("loser.jpeg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .rules {
   background-image: url("rules.jpeg");
   height: 100%;

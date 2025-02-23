@@ -26,6 +26,7 @@ function Rules({ setPhase }) {
             Take turns firing at opponents board until someone sinks all the
             opposing ships.
           </p>
+          <p>Battle with truth and don't peak at the others board!</p>
           <p>Are You Ready for Battle?</p>
           <button
             onClick={handleClick}
