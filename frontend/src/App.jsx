@@ -1,5 +1,4 @@
 import BattlePage from "./pages/BattlePage";
-import Footer from "./components/Footer";
 
 function App() {
   return (

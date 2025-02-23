@@ -8,7 +8,7 @@ body {
 }
 
 .title {
-  background-image: url("titleBG.png");
+  background-image: url(titleBG.png);
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -16,7 +16,7 @@ body {
 }
 
 .winner {
-  background-image: url("winner.jpeg");
+  background-image: url(winner.jpeg);
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -24,7 +24,7 @@ body {
 }
 
 .loser {
-  background-image: url("loser.jpeg");
+  background-image: url(loser.jpeg);
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -32,15 +32,11 @@ body {
 }
 
 .rules {
-  background-image: url("rules.jpeg");
+  background-image: url(rules.jpeg);
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.background {
-  background-image: url("headerImage.jpeg");
 }
 
 #destroyer1 {
