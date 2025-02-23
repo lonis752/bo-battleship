@@ -89,7 +89,7 @@ function P1Ships({
             <div id="destroyer" name="d1">
               <img
                 className="w-8"
-                src="/destroyer/d1.png"
+                src="d1.png"
                 id="destroyer"
                 onClick={handleSelection}
               />
@@ -97,7 +97,7 @@ function P1Ships({
             <div id="destroyer" name="d2">
               <img
                 className="w-8"
-                src="/destroyer/d2.png"
+                src="d2.png"
                 id="destroyer"
                 onClick={handleSelection}
               />
@@ -129,7 +129,7 @@ function P1Ships({
             <div id="submarine" name="s1">
               <img
                 className="w-7"
-                src="/submarine/s1.png"
+                src="s1.png"
                 id="submarine"
                 onClick={handleSelection}
               />
@@ -137,7 +137,7 @@ function P1Ships({
             <div id="submarine" name="s2">
               <img
                 className="w-7"
-                src="/submarine/s2.png"
+                src="s2.png"
                 id="submarine"
                 onClick={handleSelection}
               />
@@ -145,7 +145,7 @@ function P1Ships({
             <div id="submarine" name="s3">
               <img
                 className="w-7"
-                src="/submarine/s3.png"
+                src="s3.png"
                 id="submarine"
                 onClick={handleSelection}
               />
@@ -177,7 +177,7 @@ function P1Ships({
             <div id="cruiser" name="cr1">
               <img
                 className="w-7"
-                src="/cruiser/cr1.png"
+                src="cr1.png"
                 id="cruiser"
                 onClick={handleSelection}
               />
@@ -185,7 +185,7 @@ function P1Ships({
             <div id="cruiser" name="cr2">
               <img
                 className="w-7"
-                src="/cruiser/cr2.png"
+                src="cr2.png"
                 id="cruiser"
                 onClick={handleSelection}
               />
@@ -193,7 +193,7 @@ function P1Ships({
             <div id="cruiser" name="cr3">
               <img
                 className="w-7"
-                src="/cruiser/cr3.png"
+                src="cr3.png"
                 id="cruiser"
                 onClick={handleSelection}
               />
@@ -225,7 +225,7 @@ function P1Ships({
             <div id="battleship" name="b1">
               <img
                 className="w-7"
-                src="/battleship/b1.png"
+                src="b1.png"
                 id="battleship"
                 onClick={handleSelection}
               />
@@ -233,7 +233,7 @@ function P1Ships({
             <div id="battleship" name="b2">
               <img
                 className="w-7"
-                src="/battleship/b2.png"
+                src="b2.png"
                 id="battleship"
                 onClick={handleSelection}
               />
@@ -241,7 +241,7 @@ function P1Ships({
             <div id="battleship" name="b3">
               <img
                 className="w-7"
-                src="/battleship/b3.png"
+                src="b3.png"
                 id="battleship"
                 onClick={handleSelection}
               />
@@ -249,7 +249,7 @@ function P1Ships({
             <div id="battleship" name="b4">
               <img
                 className="w-7"
-                src="/battleship/b4.png"
+                src="b4.png"
                 id="battleship"
                 onClick={handleSelection}
               />
@@ -281,7 +281,7 @@ function P1Ships({
             <div id="carrier" name="ca1">
               <img
                 className="w-7"
-                src="/carrier/ca1.png"
+                src="ca1.png"
                 id="carrier"
                 onClick={handleSelection}
               />
@@ -289,7 +289,7 @@ function P1Ships({
             <div id="carrier" name="ca2">
               <img
                 className="w-7"
-                src="/carrier/ca2.png"
+                src="ca2.png"
                 id="carrier"
                 onClick={handleSelection}
               />
@@ -297,7 +297,7 @@ function P1Ships({
             <div id="carrier" name="ca3">
               <img
                 className="w-7"
-                src="/carrier/ca3.png"
+                src="ca3.png"
                 id="carrier"
                 onClick={handleSelection}
               />
@@ -305,7 +305,7 @@ function P1Ships({
             <div id="carrier" name="ca4">
               <img
                 className="w-7"
-                src="/carrier/ca4.png"
+                src="ca4.png"
                 id="carrier"
                 onClick={handleSelection}
               />
@@ -313,7 +313,7 @@ function P1Ships({
             <div id="carrier" name="ca5">
               <img
                 className="w-7"
-                src="/carrier/ca5.png"
+                src="ca5.png"
                 id="carrier"
                 onClick={handleSelection}
               />

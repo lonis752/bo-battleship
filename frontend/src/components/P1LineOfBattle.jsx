@@ -22,15 +22,15 @@ function P1LineOfBattle({
   setPhase,
 }) {
   const ships = {
-    destroyer: { size: 2, setCoords: setDestroyerCords, image: "/destroyer/d" },
-    submarine: { size: 3, setCoords: setSubmarineCords, image: "/submarine/s" },
-    cruiser: { size: 3, setCoords: setCruiserCords, image: "/cruiser/cr" },
+    destroyer: { size: 2, setCoords: setDestroyerCords, image: "d" },
+    submarine: { size: 3, setCoords: setSubmarineCords, image: "s" },
+    cruiser: { size: 3, setCoords: setCruiserCords, image: "cr" },
     battleship: {
       size: 4,
       setCoords: setBattleshipCords,
-      image: "/battleship/b",
+      image: "b",
     },
-    carrier: { size: 5, setCoords: setCarrierCords, image: "/carrier/ca" },
+    carrier: { size: 5, setCoords: setCarrierCords, image: "ca" },
   };
 
   function isPlacementValid(start, size, isHorizontal) {

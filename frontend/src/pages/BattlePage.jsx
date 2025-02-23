@@ -20,7 +20,7 @@ function BattlePage() {
   const [occupiedCords, setOccupiedCords] = useState([]);
 
   // Phase and Gamemode Logic
-  const [phase, setPhase] = useState("victoryAtSea");
+  const [phase, setPhase] = useState("gameStart");
   // gameStart, rules, p1set, p2set, p1atk, p2atk, cpuatk, victoryAtSea
   const [gamemode, setGamemode] = useState("single");
   // single, versus, multi
@@ -28,7 +28,7 @@ function BattlePage() {
   const [cpuHitCords, setCpuHitCords] = useState([]);
   const [cpuMissCords, setCpuMissCords] = useState([]);
 
-  const [winner, setWinner] = useState("Player 1");
+  const [winner, setWinner] = useState("");
 
   return (
     <>
