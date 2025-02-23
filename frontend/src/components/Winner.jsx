@@ -32,11 +32,11 @@ function Winner({
     <>
       <div className="winner flex items-center justify-center -mt-10">
         <div className="h-[calc(100vh-12rem)] w-screen flex flex-col items-center justify-center pb-5 gap-5">
-          <div className="font-bold text-5xl p-5 flex flex-col gap-10 bg-white/50 rounded-2xl items-center">
-            <p className="text-md font-normal">Winner: {winner}</p>
+          <div className="font-bold sm:text-5xl p-5 flex flex-col gap-10 bg-white/50 rounded-2xl items-center">
+            <p className="sm:text-md sm:font-normal">Winner: {winner}</p>
             <p>You Defeated The Computer!</p>
             <p>A spectacular display of navel combat.</p>
-            <p className="text-md font-normal">
+            <p className="sm:text-md sm:font-normal">
               But we need you at command again.
             </p>
             <button

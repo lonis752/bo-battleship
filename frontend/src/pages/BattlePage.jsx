@@ -41,7 +41,7 @@ function BattlePage() {
       <div className={phase === "rules" ? "-mt-10" : "hidden"}>
         <Rules setPhase={setPhase} />
       </div>
-      <div className="flex justify-evenly">
+      <div className="flex flex-col sm:flex-row justify-evenly">
         <div
           className={
             phase === "p1set" || phase === "cpuatk" || phase === "p1atk"

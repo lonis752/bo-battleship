@@ -4,8 +4,8 @@ function Rules({ setPhase }) {
   }
   return (
     <div className="rules">
-      <div className="h-[calc(100vh-6rem)] w-screen flex justify-center items-center">
-        <div className="flex flex-col gap-5 bg-white/85 p-20 text-center rounded-2xl items-center text-indigo-700">
+      <div className="h-[calc(100vh-6rem)] w-screen flex items-center justify-center">
+        <div className="flex flex-col sm:gap-5 bg-white/85 p-3 sm:p-20 text-center rounded-2xl items-center text-indigo-700">
           <h1 className="font-bold text-3xl">Rules</h1>
           <ul>
             <p className="font-bold text-xl">Gamemodes:</p>

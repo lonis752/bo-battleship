@@ -101,12 +101,13 @@ function P1LineOfBattle({
         );
       }
     }
+    
     return "•";
   }
 
   return (
     <div className="pt-5">
-      <div className="grid grid-cols-10 grid-rows-10 w-96 h-96">
+      <div className="grid grid-cols-10 grid-rows-10 w-50 h-50 md:w-95 md:h-95">
         {Array.from({ length: 100 }, (_, i) => (
           <div
             key={i}
@@ -118,7 +119,7 @@ function P1LineOfBattle({
                 ? "bg-orange-300 text-center font-bold text-3xl border-2"
                 : cpuHitCords.includes(i)
                 ? "bg-red-600 text-center font-bold text-3xl border-2"
-                : "border-2 bg-gray-400 text-center font-bold text-3xl"
+                : "border-2 bg-gray-400 text-center font-bold text-3xl text-xs sm:text-2xl"
             }
             onClick={!occupiedCords.includes(i) ? placeShip : undefined}
           >
